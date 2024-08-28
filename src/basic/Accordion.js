@@ -57,9 +57,7 @@ class DefaultHeader extends React.Component {
               ? iconStyle
               : { color: disable ? variable.disableRow : variables.iconStyle }
           ]}
-          name={
-            expanded ? expandedIcon || 'ios-arrow-up' : icon || 'ios-arrow-down'
-          }
+          name={expanded ? expandedIcon || 'arrow-up' : icon || 'arrow-down'}
         />
       </View>
     );

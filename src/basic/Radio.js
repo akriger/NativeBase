@@ -41,7 +41,7 @@ class Radio extends Component {
                 height: 20,
                 fontSize: variables.radioBtnSize
               }}
-              name="ios-checkmark"
+              name="checkmark"
             />
           )
         ) : (
@@ -69,11 +69,11 @@ class Radio extends Component {
             name={
               Platform.OS === 'ios'
                 ? this.props.selected
-                  ? 'ios-radio-button-on'
-                  : 'ios-radio-button-off'
+                  ? 'radio-button-on'
+                  : 'radio-button-off'
                 : this.props.selected
-                ? 'md-radio-button-on'
-                : 'md-radio-button-off'
+                ? 'radio-button-on'
+                : 'radio-button-off'
             }
           />
         )}
@@ -88,8 +88,10 @@ Radio.propTypes = {
   standardStyle: PropTypes.bool
 };
 
-const StyledRadio = connectStyle('NativeBase.Radio', {}, mapPropsToStyleNames)(
-  Radio
-);
+const StyledRadio = connectStyle(
+  'NativeBase.Radio',
+  {},
+  mapPropsToStyleNames
+)(Radio);
 
 export { StyledRadio as Radio };
